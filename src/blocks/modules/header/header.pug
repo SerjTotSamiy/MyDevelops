@@ -56,4 +56,39 @@ header.header
 					.recommended-grid-col
 		.aside-wrapper
 			aside.header-aside
-				p hello
+				.aside-heading
+					b Заголовок :
+					| товар много функциональный аккаунт и многое другое предназначен для многих целей
+				.aside-price
+					| Цена:
+					span xxxxx
+				.aside-quantity
+					| Количество:
+					input(type="text")
+				.aside-common-price
+					| Общая цена:
+					span xxxxx
+				.aside-rate
+					| Рейтинг:
+					span
+				.aside-category
+					| Категория:
+					span xxxxxajfalk
+				.aside-discount
+					| Скидка:
+					span Есть(10%)
+				.aside-stock
+					| Акция:
+					span Есть(3в1)
+				button.aside-button Купить
+			.aside-slider
+				span.aside-slider-span Рекомендуем
+				.aside-slider-cols
+					.aside-slider_col
+					.aside-slider_col
+					.aside-slider_col
+				.aside-slider-dots
+					.aside-slider_dot
+					.aside-slider_dot
+					.aside-slider_dot
+			include ../aside-reviews/aside-reviews

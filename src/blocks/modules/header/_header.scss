@@ -56,27 +56,42 @@
 .header-main {
     display: flex;
     justify-content: space-between;
+    @media screen and (max-width: $mobile-width) {
+        display: block;
+    }
 }
 
 .header-main-wrapper {
     display: flex;
     flex-direction: column;
+    @media screen and (max-width: $mobile-width) {
+        width: $mobile-width;
+    }
 }
 
 .main-slider {
     margin: 25px auto 0;
+    @media screen and (max-width: $mobile-width) {
+        margin: auto;
+    }
 }
 
 .main-slider-cols {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .main-slider-col {
-    margin-right: 10px;
     width: 200px;
     height: 200px;
+    margin-right: 10px;
     background-color: $grey-color;
+    margin-top: 10px;
+    @media screen and (max-width: $mobile-width) {
+        width: 100px;
+        height: 100px;
+    }
 }
 
 .header-aside {
@@ -109,19 +124,72 @@
     color: $grey-color;
 }
 
-.aside-wrapper {
-    border: 1px solid $black-color;
-}
+
+
 
 .recommended-grid {
     display: grid;
     grid-template-columns: auto auto auto auto auto;
     grid-gap: 20px 20px;
     margin: 10px auto 0;
+    @media screen and (max-width: $mobile-width) {
+        grid-template-columns: auto auto;
+        width: $mobile-width;
+        margin: auto;
+    }
 }
+
 
 .recommended-grid-col {
     width: 150px;
     height: 150px;
     background-color: $grey-color;
 }
+
+.aside-button {
+    display: block;
+    margin: 20px auto 0;
+    padding: 20px 75px;
+    border-radius: 20px;
+    outline: none;
+    background-color: $hard-dark-blue;
+    color: $color-white;
+    font-weight: 700;
+}
+
+.aside-slider {
+    margin-top: 30px;
+    &_col {
+        width: 100px;
+        height: 100px;
+        border: 1px solid $black-color;
+    }
+    &_dot {
+        width: 15px;
+        height: 15px;
+        background-color: $red-color;
+        border-radius: 10px;
+    }
+}
+
+.aside-slider-span {
+    font-weight: 700;
+}
+
+.aside-slider-cols {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: auto;
+    margin-top: 25px;
+}
+
+.aside-slider-dots {
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+    margin: 10px auto 0;
+}
+
+
+
